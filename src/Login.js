@@ -19,8 +19,8 @@ class RegModal extends React.Component{
                 {this.props.children}
                 <div className='column twelve wide'>
                     <div className="ui basic segment">
-                        <h2 id="fipsimage" className="ui header">
-                            <img className="ui image" src="/assets/images/fips_logo.png"/>
+                        <h2  className="ui header">
+                            <img className="ui image" src="public/img/logo.png"/>
                         </h2>
                         <div id="regmodal" className="ui form">
 
