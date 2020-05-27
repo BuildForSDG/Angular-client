@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-var createUserURL = '/createUser';
+
+var createUserURL = 'https://zerohungerbackendapi.herokuapp.com/api/accounts/signup';
 const modalRoot = document.getElementById('regmodal');
 class RegModal extends React.Component{
     constructor (props) {
@@ -117,7 +118,7 @@ class Login extends Component {
     /* here we are creating the account, modal pops up and sets the task to create*/
     _handleCreateAccount (){
         $.ajax({
-            url: createUserURL,
+            // url: createUserURL,
             method: 'GET',
             dataType: 'json',
             cache: false,
@@ -183,6 +184,20 @@ class Login extends Component {
         console.log("the values are" + JSON.stringify(values))
     }    
     render(){
+        var regForm;
+        {
+
+            this.state.user && (
+                regForm =
+                    <RegModal
+                        task={this.state.task}
+                        fullForm={true}
+                        user={this.state.user}
+                        textChanged={this._textChanged.bind(this)}
+                        save={this._handleSaveClick.bind(this)}
+                        cancel={this._handleCloseModal.bind(this)}/>
+            )
+        }    
         return(
             <div className="ui container">
                 <div className="ui middle aligned center aligned grid">
@@ -193,6 +208,7 @@ class Login extends Component {
 
                         </h2>
                         {/* registration form modal goes here */}
+                        {regForm}
                         <form id="loginForm" className="ui form" method="post" action="/login">
                             <div className="ui basic segment">
                             <div className="field">
@@ -215,7 +231,7 @@ class Login extends Component {
                                 </button>
                             </div>
                             <div className="row">
-                            <h2>Need an Account?</h2><a href="javascript:this._handleCreateAccount.bind(this);" className="lostPassword"><h2>Sign Up</h2></a>
+                            <h2>Need an Account?</h2><a href="#" onClick={this._handleCreateAccount.bind(this)} className="lostPassword"><h2>Sign Up</h2></a>
                             </div>
 
                         </form>
