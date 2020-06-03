@@ -1,0 +1,255 @@
+.ui.container {
+    padding-top: 100px;
+}
+
+#login .column {
+    max-width: 450px;
+}
+
+.ui.header > .image, .ui.header > img {
+
+    min-width: 70%;
+
+}
+
+.ui.segment{
+    background-color: rgba(192, 192, 192, 0.76);
+}
+.ui.tiny.header {
+    font-size: 1.0em;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.ui.header {
+    font-weight: 300;
+}
+highlight{
+    background-color: #000000;
+}
+
+#login, #content, .grid {
+    height: 105% !important;
+    background: url("https://images.unsplash.com/photo-1558907530-fe311178388a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.ui.form .field {
+    clear: both;
+    margin: 0 0 2em 0;
+    position: relative;
+}
+
+
+#email{
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    border-width: 1.5px;
+    border-color: transparent;
+    padding-left: 10px;
+}
+#password{
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    border-width: 1.5px;
+    border-color: transparent;
+    padding-left: 10px;
+}
+
+.ui.form .field.field input:-webkit-autofill{
+    background-color: rgba(4, 4, 4, 0.2);
+}
+
+.ui.form input:not([type]), .ui.form input[type=text], .ui.form input[type=email], .ui.form input[type=search], .ui.form input[type=password], .ui.form input[type=date], .ui.form input[type=datetime-local], .ui.form input[type=tel], .ui.form input[type=time], .ui.form input[type=file], .ui.form input[type=url], .ui.form input[type=number] {
+    padding: 0.5em 0.5em 0.5em 0;
+    font-size: 1.4em;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #328da0;
+    border-radius: 0;
+    box-shadow: 0 0 0 0 transparent inset;
+    display: block;
+    -webkit-transition: color .1s ease, border-color .1s ease;
+    transition: color .1s ease, border-color .1s ease;
+}
+
+input:focus {
+    outline: none;
+}
+
+/* Label */
+
+label {
+    font-weight: 300;
+    position: absolute;
+    pointer-events: none;
+    left: 1em;
+    top: 0.7em;
+    transition: all 0.2s ease;
+    font-size: 2.0em;
+    color: #FFFFFF;
+    padding-left: 10px;
+}
+
+.ui.form .field > label {
+    /*color: #A03084;*/
+    display: block;
+    margin: 0 0 .28571429rem;
+    color: #316f36;
+    font-size: 1.2em;
+    font-weight: 400;
+    text-transform: none;
+}
+
+/* active */
+
+input:focus ~ label, input.used ~ label {
+    top: -20px;
+    transform: scale(.75);
+    left: -0.7em;
+    font-size: 12px;
+    /*color: #A03084;*/
+}
+
+.ui.form .field.field input:-webkit-autofill {
+    box-shadow: #328da0 !important;
+    border-color: #328da0 !important;
+}
+
+.ui.form .field.field input:-webkit-autofill:focus {
+    box-shadow: 0 0 0 100px rgba(255, 255, 255, .9) inset !important;
+    border-color: #328da0 !important;
+}
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color: transparent !important;
+    background-image: none;
+    color: rgb(0, 0, 0);
+}
+
+/* Underline */
+
+.bar {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+/*the background underline in an input field*/
+.bar:before, .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #fff203;
+    transition: all 0.2s ease;
+}
+
+.bar:before {
+    left: 50%;
+}
+
+.bar:after {
+    right: 50%;
+}
+
+/* active */
+
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+    width: 50%;
+}
+
+/* active */
+
+input:focus ~ .highlight {
+    animation: inputHighlighter 0.3s ease;
+    background-color: #328da0;
+}
+
+/* Animations */
+
+@keyframes inputHighlighter {
+    from {
+        background-color: #328da0;
+    }
+    to {
+        width: 0;
+        background-color: #328da0;
+    }
+}
+
+.button {
+    position: relative;
+}
+
+.button:focus {
+    outline: 0;
+}
+
+/* Ripples container */
+
+.ripples {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: transparent;
+}
+
+/* Ripples circle */
+
+.ripplesCircle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.ripples.is-active .ripplesCircle {
+    animation: ripples .4s ease-in;
+}
+
+/* Ripples animation */
+
+@keyframes ripples {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    100% {
+        width: 200%;
+        padding-bottom: 200%;
+        opacity: 0;
+    }
+}
+
+.lostPassword{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    font-size: 1.0em;
+    text-align: center;
+    color: #FFF2F2;
+    font-weight: 400;
+}
+
+.lostPassword:hover, .lostPassword:active{
+    color: #fff203;
+}
+
+
+
+
