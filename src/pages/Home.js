@@ -1,12 +1,12 @@
 import React from 'react';
 import Main from './Main';
-import  Farmers  from '../components/Farmers';
+import Products from '../components/Products';
 
 const HomePage = () => (
-  <Main>
-    <h1>Farm Products</h1>
-    <Farmers/>
-  </Main>
-)
+	<Main>
+		<h1>Farm Products</h1>
+		<Products />
+	</Main>
+);
 
 export default HomePage;
