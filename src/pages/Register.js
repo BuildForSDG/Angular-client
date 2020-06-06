@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Button, Form, Grid, Header, Image, Message,
   Segment, Loader } from 'semantic-ui-react'
-import { Link, withRouter, Router } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import axios from 'axios';
