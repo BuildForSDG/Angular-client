@@ -4,7 +4,7 @@ import Products from '../components/Produts';
 
 const HomePage = () => (
 	<Main>
-		<h1>Home Page</h1>
+		<h1>Farm Products</h1>
 		<Products />
 	</Main>
 );

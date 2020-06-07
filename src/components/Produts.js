@@ -35,19 +35,19 @@ class Products extends Component {
 						</div>
 					</div>
 					<div class='humberger__menu__widget'>
-						<div class='header__top__right__language'>
-							<img src='img/language.png' alt='' />
-							<div>English</div>
-							<span class='arrow_carrot-down'></span>
-							<ul>
-								<li>
-									<a href='#'>Spanis</a>
-								</li>
-								<li>
-									<a href='#'>English</a>
-								</li>
-							</ul>
-						</div>
+						{/* <div class='header__top__right__language'> */}
+						{/* <img src='img/language.png' alt='' /> */}
+						{/* <div>English</div> */}
+						{/* <span class='arrow_carrot-down'></span> */}
+						{/* <ul> */}
+						{/* <li> */}
+						{/* <a href='#'>Spanis</a> */}
+						{/* </li> */}
+						{/* <li> */}
+						{/* <a href='#'>English</a> */}
+						{/* </li> */}
+						{/* </ul> */}
+						{/* </div> */}
 						<div class='header__top__right__auth'>
 							<a href='#'>
 								<i class='fa fa-user'></i> Login
@@ -60,13 +60,13 @@ class Products extends Component {
 								<a href='./index.html'>Home</a>
 							</li>
 							<li>
-								<a href='./shop-grid.html'>Shop</a>
+								<a href='./shop-grid.html'>Farm</a>
 							</li>
 							<li>
 								<a href='#'>Pages</a>
 								<ul class='header__menu__dropdown'>
 									<li>
-										<a href='./shop-details.html'>Shop Details</a>
+										<a href='./shop-details.html'>Farm Details</a>
 									</li>
 									<li>
 										<a href='./shoping-cart.html'>Shoping Cart</a>
@@ -74,14 +74,11 @@ class Products extends Component {
 									<li>
 										<a href='./checkout.html'>Check Out</a>
 									</li>
-									<li>
-										<a href='./blog-details.html'>Blog Details</a>
-									</li>
 								</ul>
 							</li>
-							<li>
-								<a href='./blog.html'>Blog</a>
-							</li>
+							{/* <li> */}
+							{/* <a href='./blog.html'>Blog</a> */}
+							{/* </li> */}
 							<li>
 								<a href='./contact.html'>Contact</a>
 							</li>
@@ -95,19 +92,13 @@ class Products extends Component {
 						<a href='#'>
 							<i class='fa fa-twitter'></i>
 						</a>
-						<a href='#'>
-							<i class='fa fa-linkedin'></i>
-						</a>
-						<a href='#'>
-							<i class='fa fa-pinterest-p'></i>
-						</a>
 					</div>
 					<div class='humberger__menu__contact'>
 						<ul>
 							<li>
-								<i class='fa fa-envelope'></i> hello@colorlib.com
+								<i class='fa fa-envelope'></i> hello@zerohunger.com
 							</li>
-							<li>Free Shipping for all Order of Kes. 99</li>
+							<li>Free Delivery for all Order of Kes. 1000</li>
 						</ul>
 					</div>
 				</div>
@@ -122,9 +113,9 @@ class Products extends Component {
 									<div class='header__top__left'>
 										<ul>
 											<li>
-												<i class='fa fa-envelope'></i> hello@colorlib.com
+												<i class='fa fa-envelope'></i> hello@zerohunger.com
 											</li>
-											<li>Free Shipping for all Order of Kes. 99</li>
+											<li>Free Delivery for all Order of Kes. 1000</li>
 										</ul>
 									</div>
 								</div>
@@ -143,19 +134,6 @@ class Products extends Component {
 											<a href='#'>
 												<i class='fa fa-pinterest-p'></i>
 											</a>
-										</div>
-										<div class='header__top__right__language'>
-											<img src='img/language.png' alt='' />
-											<div>English</div>
-											<span class='arrow_carrot-down'></span>
-											<ul>
-												<li>
-													<a href='#'>Spanis</a>
-												</li>
-												<li>
-													<a href='#'>English</a>
-												</li>
-											</ul>
 										</div>
 										<div class='header__top__right__auth'>
 											<a href='#'>
@@ -197,13 +175,7 @@ class Products extends Component {
 												<li>
 													<a href='./checkout.html'>Check Out</a>
 												</li>
-												<li>
-													<a href='./blog-details.html'>Blog Details</a>
-												</li>
 											</ul>
-										</li>
-										<li>
-											<a href='./blog.html'>Blog</a>
 										</li>
 										<li>
 											<a href='./contact.html'>Contact</a>
@@ -246,7 +218,7 @@ class Products extends Component {
 								<div class='hero__categories'>
 									<div class='hero__categories__all'>
 										<i class='fa fa-bars'></i>
-										<span>All departments</span>
+										<span>All Farm categories</span>
 									</div>
 									<ul>
 										<li>
@@ -266,9 +238,6 @@ class Products extends Component {
 										</li>
 										<li>
 											<a href='#'>Butter & Eggs</a>
-										</li>
-										<li>
-											<a href='#'>Fastfood</a>
 										</li>
 										<li>
 											<a href='#'>Fresh Onion</a>
@@ -772,7 +741,10 @@ class Products extends Component {
 											</a>
 											<a href='#' class='latest-product__item'>
 												<div class='latest-product__item__pic'>
-													<img src='img/latest-product/lp-3.jpg' alt='' />
+													<img
+														src='img/latest-product/lp-3.jpg'
+														alt='product'
+													/>
 												</div>
 												<div class='latest-product__item__text'>
 													<h6>Crab Pool Security</h6>
@@ -888,7 +860,7 @@ class Products extends Component {
 						<div class='row'>
 							<div class='col-lg-12'>
 								<div class='section-title from-blog__title'>
-									<h2>From The Blog</h2>
+									<h2>Trending Fresh Farm Products</h2>
 								</div>
 							</div>
 						</div>
@@ -978,13 +950,13 @@ class Products extends Component {
 								<div class='footer__about'>
 									<div class='footer__about__logo'>
 										<a href='./index.html'>
-											<img src='img/logo.png' alt='' />
+											<img src='../img/logo.png' alt='' />
 										</a>
 									</div>
 									<ul>
-										<li>Address: 60-49 Road 11378 New York</li>
-										<li>Phone: +65 11.188.888</li>
-										<li>Email: hello@colorlib.com</li>
+										<li>Address: Westmall Road 11378 Nairobi Kenya</li>
+										<li>Phone: +254 700 100 200</li>
+										<li>Email: hello@zerohunger.com</li>
 									</ul>
 								</div>
 							</div>
@@ -996,19 +968,13 @@ class Products extends Component {
 											<a href='#'>About Us</a>
 										</li>
 										<li>
-											<a href='#'>About Our Shop</a>
-										</li>
-										<li>
-											<a href='#'>Secure Shopping</a>
+											<a href='#'>Ease Meeting Farmers</a>
 										</li>
 										<li>
 											<a href='#'>Delivery infomation</a>
 										</li>
 										<li>
 											<a href='#'>Privacy Policy</a>
-										</li>
-										<li>
-											<a href='#'>Our Sitemap</a>
 										</li>
 									</ul>
 									<ul>
@@ -1017,9 +983,6 @@ class Products extends Component {
 										</li>
 										<li>
 											<a href='#'>Our Services</a>
-										</li>
-										<li>
-											<a href='#'>Projects</a>
 										</li>
 										<li>
 											<a href='#'>Contact</a>
@@ -1037,7 +1000,8 @@ class Products extends Component {
 								<div class='footer__widget'>
 									<h6>Join Our Newsletter Now</h6>
 									<p>
-										Get E-mail updates about our latest shop and special offers.
+										Get updates about our latest Amazing Farmers' Products and
+										special offers.
 									</p>
 									<form action='#'>
 										<input type='text' placeholder='Enter your mail' />
@@ -1055,9 +1019,6 @@ class Products extends Component {
 										<a href='#'>
 											<i class='fa fa-twitter'></i>
 										</a>
-										<a href='#'>
-											<i class='fa fa-pinterest'></i>
-										</a>
 									</div>
 								</div>
 							</div>
@@ -1067,17 +1028,17 @@ class Products extends Component {
 								<div class='footer__copyright'>
 									<div class='footer__copyright__text'>
 										<p>
-											{/* <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> */}
+											{/* <!-- Link back to zerohunger can't be removed. Template is licensed under CC BY 3.0. --> */}
 											Copyright &copy;
 											<script>
 												document.write(new Date().getFullYear());
 											</script>{' '}
-											All rights reserved | This template is made with{' '}
+											All rights reserved | made with{' '}
 											<i class='fa fa-heart' aria-hidden='true'></i> by{' '}
-											<a href='https://colorlib.com' target='_blank'>
-												Colorlib
+											<a href='https://zerohunger.com' target='_blank'>
+												zerohungerafrica
 											</a>
-											{/* <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> */}
+											{/* <!-- Link back to zerohunger can't be removed. Template is licensed under CC BY 3.0. --> */}
 										</p>
 									</div>
 									<div class='footer__copyright__payment'>
