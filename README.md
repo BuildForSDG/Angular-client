@@ -7,7 +7,7 @@ For this example, I used [Semantic UI React](https://github.com/Semantic-Org/Sem
 
 ## Usage
 ```
-git clone https://github.com/itsRealoj/msoto
+git clone https://github.com/feyyazakkus/react-redux-login-registration-example
 npm intall
 npm start
 ```

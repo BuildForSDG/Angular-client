@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import { Button, Form, Grid, Header, Image, Message,
   Segment, Loader } from 'semantic-ui-react'
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import axios from 'axios';
 
 import validateInput from '../validators/register';
 import { registerUser } from '../store/actions/auth';
@@ -16,8 +15,6 @@ class RegisterForm extends Component {
       firstName: '',
       lastName: '',
       email: '',
-      phone: '',
-      nationalId: '',
       password: '',
       confirmPassword: '',
       errors: {},
@@ -29,16 +26,6 @@ class RegisterForm extends Component {
     e.preventDefault();
     if (this.isValid()) {
       this.setState({ errors: {}, isLoading: true });
-      axios.post('http://localhost:5000/api/users/signup', this.state)
-      .then(response => {
-        console.log(response)
-        if(response)
-    // alert('signup successful!')
-    this.props.history.push('/Login');
-      })
-      .catch(error => {
-        console.log(error)
-      })
       this.props.registerUser(this.state, this.props.history);
     }
   }
@@ -65,7 +52,7 @@ class RegisterForm extends Component {
   }
 
   render() {
-    const { firstName, lastName, email, phone, nationalId, password,
+    const { firstName, lastName, email, password,
       confirmPassword, errors, isLoading } = this.state;
 
     return(
@@ -87,7 +74,7 @@ class RegisterForm extends Component {
                   fluid
                   placeholder='First Name'
                   name='firstName'
-                  value={firstName}
+                  defaultValue={firstName}
                   error={errors.firstName ? true : false}
                   onChange={this.onChange}
                 />
@@ -95,7 +82,7 @@ class RegisterForm extends Component {
                   fluid
                   placeholder='Last Name'
                   name='lastName'
-                  value={lastName}
+                  defaultValue={lastName}
                   error={errors.lastName ? true : false}
                   onChange={this.onChange}
                 />
@@ -103,24 +90,8 @@ class RegisterForm extends Component {
                   fluid
                   placeholder='E-mail'
                   name='email'
-                  value={email}
+                  defaultValue={email}
                   error={errors.email ? true : false}
-                  onChange={this.onChange}
-                />
-                <Form.Input
-                  fluid
-                  placeholder='Phone'
-                  name='phone'
-                  value={phone}
-                  error={errors.phone ? true : false}
-                  onChange={this.onChange}
-                />
-                <Form.Input
-                  fluid
-                  placeholder='National ID'
-                  name='nationalId'
-                  value={nationalId}
-                  error={errors.nationalId ? true : false}
                   onChange={this.onChange}
                 />
                 <Form.Input
@@ -128,7 +99,7 @@ class RegisterForm extends Component {
                   placeholder='Password'
                   name='password'
                   type='password'
-                  value={password}
+                  defaultValue={password}
                   error={errors.password ? true : false}
                   onChange={this.onChange}
                 />
@@ -137,17 +108,16 @@ class RegisterForm extends Component {
                   placeholder='Confirm Password'
                   name='confirmPassword'
                   type='password'
-                  value={confirmPassword}
+                  defaultValue={confirmPassword}
                   error={errors.confirmPassword ? true : false}
                   onChange={this.onChange}
                 />
-                    <Button color='teal' fluid size='large' disabled={isLoading}>
-                      {
-                        !isLoading
-                        ? 'Create Account'
-                        : <Loader active inverted inline size='small' />
-                      }>
-                      </Button>
+                <Button color='teal' fluid size='large' disabled={isLoading}>
+                  {!isLoading
+                    ? 'Create Account'
+                    : <Loader active inverted inline size='small' />
+                  }
+                </Button>
               </Segment>
             </Form>
 
@@ -170,4 +140,4 @@ const mapStateToProps = (state) => ({
   errors: state.errors
 })
 
-export default withRouter(connect(mapStateToProps, { registerUser })(RegisterForm))
+export default connect(mapStateToProps, { registerUser })(RegisterForm)
