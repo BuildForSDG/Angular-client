@@ -13,7 +13,7 @@ export const loginUser = (state, history) => (dispatch) => {
 	AuthService.login(state.email, state.password)
 		.then((resp) => {
 			if (resp.data.success) {
-				dispatch(setCurrentUser(resp.data.profile));
+				dispatch(setCurrentUser(resp.data.message));
 				AuthService.saveToken(resp.data.token);
 				history.push('/');
 			}
@@ -52,10 +52,10 @@ export const registerUser = (data, history) => (dispatch) => {
 			}
 		})
 		.catch((error) => {
-			if (error.response.data) {
+			if (error) {
 				dispatch(
 					getErrors({
-						registerError: error.response.data.error,
+						registerError: error,
 					})
 				);
 			}
