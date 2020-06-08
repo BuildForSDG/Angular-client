@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import imgBannerBackground from '../img/hero/banner.jpg';
+//img/hero/banner.jpg
 
 class Products extends Component {
 	render() {
@@ -35,19 +37,6 @@ class Products extends Component {
 						</div>
 					</div>
 					<div class='humberger__menu__widget'>
-						{/* <div class='header__top__right__language'> */}
-						{/* <img src='img/language.png' alt='' /> */}
-						{/* <div>English</div> */}
-						{/* <span class='arrow_carrot-down'></span> */}
-						{/* <ul> */}
-						{/* <li> */}
-						{/* <a href='#'>Spanis</a> */}
-						{/* </li> */}
-						{/* <li> */}
-						{/* <a href='#'>English</a> */}
-						{/* </li> */}
-						{/* </ul> */}
-						{/* </div> */}
 						<div class='header__top__right__auth'>
 							<a href='#'>
 								<i class='fa fa-user'></i> Login
@@ -278,7 +267,7 @@ class Products extends Component {
 										</div>
 									</div>
 								</div>
-								<div class='hero__item set-bg' data-setbg='img/hero/banner.jpg'>
+								<div class='hero__item set-bg' data-setbg={imgBannerBackground}>
 									<div class='hero__text'>
 										<span>FRUIT FRESH</span>
 										<h2>
@@ -1042,7 +1031,7 @@ class Products extends Component {
 										</p>
 									</div>
 									<div class='footer__copyright__payment'>
-										<img src='img/payment-item.png' alt='' />
+										<img src='../img/payment-item.png' alt='' />
 									</div>
 								</div>
 							</div>
